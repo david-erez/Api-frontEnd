@@ -32,9 +32,9 @@ async function getAllProducts() {
     const products = await services.getAll("products")
     const container = document.getElementById("containerCards");
     renderCards(container, products, ["id", "title", "price", "images"], {
-    onEdit: (item) => editProduct(item.id, item.title, item.price),
-    onDelete: (id) => deleteProduct(id)
-});
+        onEdit: (item) => editProduct(item),
+        onDelete: (id) => deleteProduct(id)
+    });
 }
 //para tomar informac ion del dispositivo y poder tomar la foto 
 async function initCamera(){
@@ -86,7 +86,7 @@ async function getByIdProducts() {
         }
         // renderCards espera un array
         renderCards(container, Array.isArray(producto) ? producto : [producto], ["id", "title", "price", "images"], {
-            onEdit: (item) => editProduct(item.id, item.title, item.price),
+            onEdit: (item) => editProduct(item),
             onDelete: (id) => deleteProduct(id)
         });
     } catch (err) {
@@ -97,6 +97,7 @@ async function getByIdProducts() {
 
 async function deleteProduct(id) {
     await services.delete("products",id)   
+    
     getAllProducts() 
 }
 
@@ -107,9 +108,10 @@ async function saveProduct() {
     const price =Number(document.getElementById("price").value);
     const data = {title, price, images: imagenBase ? [imagenBase] : []}
 
-    if (id || !price) {
+    // allow updates when `id` exists; require title and numeric price
+    if (!title || isNaN(price)) {
         console.error("complete los datos");
-        alert("completa todo los campos");
+        alert("Completa todos los campos (nombre y precio válido)");
         return;
     }
 
@@ -126,10 +128,15 @@ async function saveProduct() {
     }
 
 }
-function editProduct(id, title, price){
-    document.getElementById("id").value = id;
-    document.getElementById("title").value = title;
-    document.getElementById("price").value = price;
+function editProduct(product){
+    if (!product) return;
+    document.getElementById("id").value = product.id || '';
+    document.getElementById("title").value = product.title || '';
+    document.getElementById("price").value = product.price || '';
+    // Preserve existing image so update doesn't remove it
+    const img = Array.isArray(product.images) ? product.images[0] : (product.images || product.thumbnail || '');
+    imagenBase = img || '';
+    if (imagenBase && preview) preview.src = imagenBase;
 }
 
 
@@ -181,5 +188,6 @@ function clearForm() {
     document.getElementById("title").value = "";
     document.getElementById("price").value = "";
     imagenBase = "";
-    preview.src = "";
+    const previewEl = document.getElementById('preview');
+    if (previewEl) previewEl.src = "";
 }

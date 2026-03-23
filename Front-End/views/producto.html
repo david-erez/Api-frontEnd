@@ -7,13 +7,18 @@
 </head>
 <body>
 
-<h2>Productos</h2>
+    <header class="retro-header">
+        <h1>PODUCTOS</h1>
+    </header>
 <div class="buscar">
  <a href="index.html" class="btn-regresar">&lt;</a>
 <input type="number" id="di" placeholder="Buscar Producto por id">
 <button id="buscar">Buscar</button>
-</div>
 
+</div>
+<div class="buscarc">
+    <a href="carts.html"  class="btn-regresar" >ver mi carro</a>
+</div>
 <div class="guardar">
     <h2>Guardar producto</h2>
     <br>
@@ -25,16 +30,17 @@
     <canvas id="canvas" width="300" height="200" style="display:none;"></canvas>
     <button id="tomar">Tomar foto</button>
     <input type="file" id="subirImg" accept="image/*">
-    <br></br>
     <img id="preview" width="200">
- 
+    
     <button id="save">Guardar</button>
 </div>
 
-<div class="carro">
-    <a href="carts.html" class="buscar">ver mi carro</a>
-</div>
+
 <div id="containerCards" class="d-flex flex-wrap"></div>
+    <footer class="retro-footer">
+        <p>© 1989 - Fake Console Systems</p>
+    </footer>
+
 <script type="module" src="/Front-End/js/modules/Product.js"></script>
 
 </body>

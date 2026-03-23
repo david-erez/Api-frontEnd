@@ -17,10 +17,14 @@ async function deletePost(id ) {
 }
 
 async function savePost() {
-    const titulo = document.getElementById("title").value;
-    const contenido = document.getElementById("body").value;
+    const title = document.getElementById("title").value;
+    const body = document.getElementById("body").value;
     const id = document.getElementById("id").value;
-    const data  = {titulo, contenido}
+    const data  = {title, body}
+    if (!title || !body) {
+        alert('Completa título y contenido');
+        return;
+    }
     if (id) {
         await services.update("posts", id, data)
     }else{

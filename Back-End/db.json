@@ -60,12 +60,18 @@
       "thumbnail": "https://cdn.dummyjson.com/product-images/groceries/chicken-meat/thumbnail.webp"
     },
     {
-      "title": "Cooking Oil",
+      "title": "Cooking Oils",
       "price": 4.99,
       "images": [
         "https://cdn.dummyjson.com/product-images/groceries/cooking-oil/1.webp"
       ],
       "id": "20"
+    },
+    {
+      "title": "Cucumbers",
+      "price": 1.49,
+      "images": [],
+      "id": "21"
     },
     {
       "id": "22",

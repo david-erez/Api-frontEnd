@@ -18,6 +18,9 @@ function renderCarts(carts) {
         container.appendChild(cartElement);
     });
 }
+async function deleteCart(id) {
+    await services.delete("carts",id)   
+}
 function createCart(cart) {
     const div = document.createElement("div");
     div.classList.add("retro-cart");
@@ -40,9 +43,12 @@ function createCart(cart) {
             TOTAL: $${cart.total}
         </div>
 
-        <button class="delete">DELETE</button>
+        <button class="continuar">Continuar compra</button>
+        <button class="delete">eliminar carro completo</button>
     `;
-
+    div.querySelector(".continuar").addEventListener("click", () => {
+        alert("funcion no implementada");
+    });
     div.querySelector(".delete").addEventListener("click", () => {
         deleteCart(cart.id);
     });

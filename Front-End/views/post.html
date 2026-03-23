@@ -8,25 +8,28 @@
     <title>Document</title>
 </head>
 <body>
-<h2>Guardar post</h2>
-<br>
+    <header class="retro-header">
+        <h1>POST</h1>
+    </header>
+<div class="buscar">
+ <a href="index.html" class="btn-regresar">&lt;</a>
 <input type="hidden" id="id">
 <input type="text" id="title" placeholder="tidulo">
 <input type="text" id="body" placeholder="descripcion">
 <button id="save">Guardar</button>
+</div>
     <hr>
 
 <table>
     <thead>
-        <tr>
-            <th>ID</th>
-            <th>Title</th>
-            <th>Price</th>
-            <th>Acciones</th>
-        </tr>
+   
     </thead>
     <tbody id="conte"></tbody>
 </table>
+    <footer class="retro-footer">
+        <p>© 1989 - Fake Console Systems</p>
+    </footer>
+
     <script type="module" src="/Front-End/js/modules/Posts.js"></script>
 </body>
 </html>

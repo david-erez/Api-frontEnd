@@ -32,6 +32,9 @@ body {
     padding: 40px;
     gap: 30px;
 }
+.retro h3{
+    color: goldenrod;
+}
 .retro button {
     width: 150px;
     flex: none;
@@ -199,4 +202,19 @@ body {
 .buscar button:hover {
     background: #00ccaa;
     box-shadow: 0 0 10px #00ffcc;
+}
+/* post */
+#conte{
+justify-content: center;
+
+}
+.buscarc{
+        width: 30%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
 }
