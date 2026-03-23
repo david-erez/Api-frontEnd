@@ -1,0 +1,202 @@
+/* cuaepo general */
+body {
+    background-color: rgb(88, 15, 28);
+    background:
+        linear-gradient(rgb(0, 0, 0), rgba(17, 17, 17, 0.100)),
+        url('resourses/acd.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: #fff;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+/* Carro de compras */
+.retro-header {
+    text-align: center;
+    padding: 20px;
+    border-bottom: 2px solid #00ffcc;
+    box-shadow: 0 0 10px #00ffcc;
+}
+
+.retro-header h1 {
+    color: #fff;
+}
+
+.retro {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    padding: 40px;
+    gap: 30px;
+}
+.retro button {
+    width: 150px;
+    flex: none;
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+}
+
+.retro-cart button {
+    align-self: center;
+}
+.retro-cart {
+    width: 280px;
+    background: rgba(0, 0, 0, 0.7);
+    border: 2px solid grey;
+    border-radius: 15px;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 0 10px #fff;
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.retro-cart:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #00ffcc;
+}
+
+.retro-footer {
+    text-align: center;
+    padding: 10px;
+    border-top: 2px solid #00ffcc;
+    margin-top: 20px;
+}
+
+/* productos: */
+
+
+
+/*cartas genericas*/
+.card {
+    width: 18rem;
+    height: auto;
+    background: rgba(0, 0, 0, 0.75);
+    border: 2px solid grey;
+    border-radius: 15px;
+    box-shadow: 0 0 5px  #fff;
+    color: white;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease
+}
+.card:hover{
+    transform: scale(1.03);
+    box-shadow: 0 0 20px #fff;
+}
+.card-body{
+    padding: 15px;
+}
+.card-body strong {
+    color: #00ffcc;
+}
+.card-image{
+    background: rgba(0, 0, 0, 0.7);
+    border: 2px solid gray;
+    border-radius: 15px;
+    padding: 20px 20px;
+    
+}
+.edit,
+.delete {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.delete:hover {
+    box-shadow: 0 0 10px #dc3545;
+}
+.edit {
+    background: #16366f;
+    color: black;
+}
+#containerCards{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+/*productos*/
+.guardar{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 320px;
+    max-height: 90vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background: rgba(0, 0, 0, 0.8);
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 12px #fff;
+    z-index: 1000;
+}
+.guardar input,
+.guardar button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    box-sizing: border-box;
+}
+.product{
+    background: rgba(0, 0, 0, 0.7);
+    border: 2px solid gray;
+    border-radius: 15px;
+    padding: 20px 20px;
+    
+}
+.buscar{
+  display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.buscar input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #00ffcc;
+    background: #111;
+    color: #fff;
+    outline: none;
+}   
+.btn-regresar {
+    font-size: 25px;
+    padding: 10px 15px;
+    text-decoration: none;
+    background: #222;
+    color: white;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+/* BOTÓN */
+.buscar button{
+    width: 30%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.buscar button:hover {
+    background: #00ccaa;
+    box-shadow: 0 0 10px #00ffcc;
+}

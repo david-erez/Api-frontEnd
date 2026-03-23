@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CRUD Products</title>
+    <link rel="stylesheet" href="/Front-End/views/style.css">
+</head>
+<body>
+
+<h2>Productos</h2>
+<div class="buscar">
+ <a href="index.html" class="btn-regresar">&lt;</a>
+<input type="number" id="di" placeholder="Buscar Producto por id">
+<button id="buscar">Buscar</button>
+</div>
+
+<div class="guardar">
+    <h2>Guardar producto</h2>
+    <br>
+    <input type="hidden" id="id">
+    <input type="text" id="title" placeholder="Nombre">
+    <input type="number" id="price" placeholder="Precio">
+
+    <video id="video" width="300" height="200" autoplay></video>
+    <canvas id="canvas" width="300" height="200" style="display:none;"></canvas>
+    <button id="tomar">Tomar foto</button>
+    <input type="file" id="subirImg" accept="image/*">
+    <br></br>
+    <img id="preview" width="200">
+ 
+    <button id="save">Guardar</button>
+</div>
+
+<div class="carro">
+    <a href="carts.html" class="buscar">ver mi carro</a>
+</div>
+<div id="containerCards" class="d-flex flex-wrap"></div>
+<script type="module" src="/Front-End/js/modules/Product.js"></script>
+
+</body>
+</html>

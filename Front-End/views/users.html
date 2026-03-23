@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CRUD Users</title>
+    <link rel="stylesheet" href="/Front-End/views/style.css">
+
+</head>
+<body>
+
+<h2>Usuarios</h2>
+
+
+<label>Buscar usuario</label>
+<br>
+<input type="number" id="di" placeholder="Ejemplo : 5">
+<button id="buscar">Buscar</button>
+<div class="guardar">
+    <h2>Guardar Usuario</h2>
+    <br>
+    <input type="hidden" id="id">
+    <input type="text" id="firs" placeholder="Nombre">
+    <input type="number" id="age" placeholder="Precio">
+
+    <video id="video" width="300" height="200" autoplay></video>
+    <canvas id="canvas" width="300" height="200" style="display:none;"></canvas>
+    <button id="tomar">Tomar foto</button>
+    <input type="file" id="subirImg" accept="image/*">
+    <br></br>
+    <img id="preview" width="200">
+ 
+    <button id="save">Guardar</button>
+</div>
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Age</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody id="containers"></tbody>
+</table>
+<div id="containerCards" class="d-flex flex-wrap"></div>
+<script type="module" src="/Front-End/js/modules/User.js"></script>
+
+</body>
+</html>
